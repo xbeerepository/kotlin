@@ -16,3 +16,5 @@ provision:
 
 command:
   kotlin: kotlin {{ .args }}
+  kotlinc-jvm: kotlinc-jvm {{ .args }}
+
