@@ -1,0 +1,18 @@
+schema-version: 1.0
+
+
+var:
+  version: 1.6.10
+
+dependency: aws-jdk
+
+
+provision:
+  - url:
+      from: https://github.com/JetBrains/kotlin/releases/download/v{% version %}/kotlin-compiler-{% version %}.zip
+      todir: /opt
+  - systempath: /opt/kotlinc/bin
+
+
+command:
+  kotlin: kotlin {{ .args }}
